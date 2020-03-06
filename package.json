@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nakajmg/stylelint-scss-no-extend.git"
+    "url": "git+https://github.com/nakajmg/stylelint-disallow-at-rule.git"
   },
   "keywords": [
     "stylelint",
@@ -18,9 +18,9 @@
   "author": "nakajmg",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nakajmg/stylelint-scss-no-extend/issues"
+    "url": "https://github.com/nakajmg/stylelint-disallow-at-rule/issues"
   },
-  "homepage": "https://github.com/nakajmg/stylelint-scss-no-extend#readme",
+  "homepage": "https://github.com/nakajmg/stylelint-disallow-at-rule#readme",
   "devDependencies": {
     "stylelint": "^13.2.0"
   }
