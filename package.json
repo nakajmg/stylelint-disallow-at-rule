@@ -1,0 +1,23 @@
+{
+  "name": "stylelint-scss-no-extend",
+  "version": "1.0.0",
+  "description": "stylelint rule to disallow @extend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nakajmg/stylelint-scss-no-extend.git"
+  },
+  "keywords": [
+    "stylelint",
+    "scss"
+  ],
+  "author": "nakajmg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nakajmg/stylelint-scss-no-extend/issues"
+  },
+  "homepage": "https://github.com/nakajmg/stylelint-scss-no-extend#readme"
+}
