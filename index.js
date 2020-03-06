@@ -1,5 +1,4 @@
 var stylelint = require("stylelint");
-
 var ruleName = "disallow-at-rule/disallow-at-rule";
 var messages = stylelint.utils.ruleMessages(ruleName, {
   rejected: function(atRuleName) {
