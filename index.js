@@ -2,11 +2,12 @@ var stylelint = require("stylelint");
 
 var ruleName = "disallow-at-rule/disallow-at-rule";
 var messages = stylelint.utils.ruleMessages(ruleName, {
-  rejected: atRuleName => 'Disallowed at-rule "@' + atRuleName + '" was found'
+  rejected: function(atRuleName) {
+    return 'Disallowed at-rule "@' + atRuleName + '" was found';
+  }
 });
 
 var AT_RULE_TYPE = "atrule";
-var AT_EXTEND = "extend";
 
 function isDisallowedAtRule(disallowedRuleNames, rule) {
   disallowedRuleNames = disallowedRuleNames || [];
@@ -16,7 +17,20 @@ function isDisallowedAtRule(disallowedRuleNames, rule) {
 
 function ruleFunction(primaryOption, secondaryOption) {
   return function(postcssRoot, postcssResult) {
-    var validOptions = stylelint.utils.validateOptions(postcssResult, ruleName);
+    var validOptions = stylelint.utils.validateOptions(
+      postcssResult,
+      ruleName,
+      { actual: primaryOption },
+      {
+        actual: secondaryOption,
+        possible: [
+          function(value) {
+            return typeof value === "string";
+          }
+        ],
+        optional: false
+      }
+    );
     if (!validOptions) {
       return;
     }
@@ -24,8 +38,12 @@ function ruleFunction(primaryOption, secondaryOption) {
       return;
     }
 
-    postcssRoot.walkAtRules(rule => {
-      if (isDisallowedAtRule(["extend"], rule)) {
+    var ruleNames = !Array.isArray(secondaryOption)
+      ? [secondaryOption]
+      : secondaryOption;
+
+    postcssRoot.walkAtRules(function(rule) {
+      if (isDisallowedAtRule(ruleNames, rule)) {
         stylelint.utils.report({
           message: messages.rejected(rule.name),
           node: rule,
