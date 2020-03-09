@@ -1,5 +1,5 @@
 var stylelint = require("stylelint");
-var ruleName = "disallow-at-rule/disallow-at-rule";
+var ruleName = "disallow-at-rule/rules";
 var messages = stylelint.utils.ruleMessages(ruleName, {
   rejected: function(atRuleName) {
     return 'Disallowed at-rule "@' + atRuleName + '" was found';
