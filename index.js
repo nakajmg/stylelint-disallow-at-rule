@@ -46,7 +46,7 @@ function ruleFunction(primaryOption, secondaryOption) {
         stylelint.utils.report({
           message: messages.rejected(rule.name),
           node: rule,
-          ruleName,
+          ruleName: ruleName,
           result: postcssResult
         });
       }
