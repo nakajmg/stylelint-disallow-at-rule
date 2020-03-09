@@ -1,6 +1,6 @@
 {
   "name": "stylelint-disallow-at-rule",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "stylelint rule to disallow at-rule specifically",
   "main": "index.js",
   "scripts": {
