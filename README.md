@@ -17,7 +17,7 @@ stylelint-disallow-at-rule is a plugin for [stylelint](https://github.com/stylel
 First, install stylelint-disallow-at-rule (and stylelint) via npm:
 
 ```
-npm install st  ylelint stylelint-disallow-at-rule
+npm install stylelint stylelint-disallow-at-rule
 ```
 
 ## Config
