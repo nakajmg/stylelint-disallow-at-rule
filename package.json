@@ -4,7 +4,7 @@
   "description": "stylelint rule to disallow at-rule specifically",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest ./test/*.test.js",
     "lint": "stylelint src/test.scss"
   },
   "repository": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/nakajmg/stylelint-disallow-at-rule#readme",
   "devDependencies": {
+    "jest": "^25.1.0",
     "stylelint": "^13.2.0"
   }
 }

@@ -1,0 +1,21 @@
+@mixin purple {
+  color: purple;
+}
+
+.hoge {
+  color: red;
+  .fuga {
+    color: blue;
+  }
+}
+
+.hogehoge {
+  @at-root {
+    .hogefuga {
+      @extend .hoge;
+    }
+    .fuga {
+      @include purple;
+    }
+  }
+}
